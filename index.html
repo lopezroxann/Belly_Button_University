@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:rgb(225, 223, 220);">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(https://www.nutraingredients.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/8/5/3/4/4374358-1-eng-GB/Valuable-protection-Is-the-variety-of-gut-bacteria-more-important-than-immune-system-in-newborns.jpg);">
+        <h1 style = "font-family:'Marker felt'"><strong>Belly Button Biodiversity Dashboard</strong></h1>
+        <p style = "font-family:'Marker felt'">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div style="background-color:coral;" class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div style="background-color:coral;" class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p>This chart displays the top ten bacteria that is found in our test subject's belly button sample.</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p>This demonstrates how many times our test subject washed their belly button per week.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p>This chart displays all of the bacterial species found in our test subject's sample.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="js/charts.js"></script>
+
+</body>
+
+</html>
